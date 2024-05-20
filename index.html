@@ -62,6 +62,30 @@
       myOutput += `</div>`;
       document.querySelector("#output").innerHTML = myOutput;
     }
+
+   var formfield = document.getElementById('formfield');
+
+   function add(){
+    var newField = document.createElement('input');
+    newField.setAttribute('type','text');
+    newField.setAttribute('First Name','text');
+    newField.setAttribute('Last Name','text');
+    newField.setAttribute('Email','text');
+    newField.setAttribute('Address','text');
+    newField.setAttribute('City','text');
+    newField.setAttribute('State','text');
+    newField.setAttribute('Postal Code','text');
+    newField.setAttribute('siz',50);
+    newField.setAttribute('placeholder','Optional Field');
+    formfield.appendChild(newField);
+   }
+
+   function remove(){
+    var input_tags = formfield.getElementsByTagName('input');
+    if(input_tags.length > 2) {
+     formfield.removeChild(input_tags[(input_tags.length) - 1]);
+    }
+   }
   </script>  
  </body>
 </html>
